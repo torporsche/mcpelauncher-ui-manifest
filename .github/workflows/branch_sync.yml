@@ -81,7 +81,7 @@ jobs:
     if: needs.prepare.outputs.sync == 'true' && !failure() && !cancelled()
     needs:
     - prepare
-    # - linux-AppImage # Deprecated now fails partially
+    - linux-AppImage # Deprecated now fails partially
     - macOS
     - linux-pkg
     runs-on: ubuntu-latest
